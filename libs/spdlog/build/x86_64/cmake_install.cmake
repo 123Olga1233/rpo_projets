@@ -1,8 +1,8 @@
-# Install script for directory: /home/gallaann/AndroidStudioProjects/libs/spdlog/spdlog
+# Install script for directory: C:/Users/Name040220/Desktop/project/BMSTU_SD_project/libs/spdlog/spdlog
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/usr/local")
+  set(CMAKE_INSTALL_PREFIX "C:/Program Files (x86)/spdlog")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -12,7 +12,7 @@ if(NOT DEFINED CMAKE_INSTALL_CONFIG_NAME)
     string(REGEX REPLACE "^[^A-Za-z0-9_]+" ""
            CMAKE_INSTALL_CONFIG_NAME "${BUILD_TYPE}")
   else()
-    set(CMAKE_INSTALL_CONFIG_NAME "RelWithDebInfo")
+    set(CMAKE_INSTALL_CONFIG_NAME "Release")
   endif()
   message(STATUS "Install configuration: \"${CMAKE_INSTALL_CONFIG_NAME}\"")
 endif()
@@ -39,35 +39,35 @@ endif()
 
 # Set default install directory permissions.
 if(NOT DEFINED CMAKE_OBJDUMP)
-  set(CMAKE_OBJDUMP "/home/gallaann/Android/Sdk/ndk/23.1.7779620/toolchains/llvm/prebuilt/linux-x86_64/bin/llvm-objdump")
+  set(CMAKE_OBJDUMP "C:/Users/Name040220/AppData/Local/Android/Sdk/ndk/25.2.9519653/toolchains/llvm/prebuilt/windows-x86_64/bin/llvm-objdump.exe")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/gallaann/AndroidStudioProjects/libs/spdlog/build/x86_64/example/cmake_install.cmake")
+  include("C:/Users/Name040220/Desktop/project/BMSTU_SD_project/libs/spdlog/build/x86_64/example/cmake_install.cmake")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include" TYPE DIRECTORY FILES "/home/gallaann/AndroidStudioProjects/libs/spdlog/spdlog/include/" REGEX "/fmt\\/bundled$" EXCLUDE)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include" TYPE DIRECTORY FILES "C:/Users/Name040220/Desktop/project/BMSTU_SD_project/libs/spdlog/spdlog/include/" REGEX "/fmt\\/bundled$" EXCLUDE)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE STATIC_LIBRARY FILES "/home/gallaann/AndroidStudioProjects/libs/spdlog/build/x86_64/libspdlog.a")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE STATIC_LIBRARY FILES "C:/Users/Name040220/Desktop/project/BMSTU_SD_project/libs/spdlog/build/x86_64/libspdlog.a")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/spdlog/fmt/bundled/" TYPE DIRECTORY FILES "/home/gallaann/AndroidStudioProjects/libs/spdlog/spdlog/include/spdlog/fmt/bundled/")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/spdlog/fmt/bundled/" TYPE DIRECTORY FILES "C:/Users/Name040220/Desktop/project/BMSTU_SD_project/libs/spdlog/spdlog/include/spdlog/fmt/bundled/")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/gallaann/AndroidStudioProjects/libs/spdlog/build/x86_64/spdlog.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "C:/Users/Name040220/Desktop/project/BMSTU_SD_project/libs/spdlog/build/x86_64/spdlog.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/cmake/spdlog/spdlogConfigTargets.cmake")
     file(DIFFERENT EXPORT_FILE_CHANGED FILES
          "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/cmake/spdlog/spdlogConfigTargets.cmake"
-         "/home/gallaann/AndroidStudioProjects/libs/spdlog/build/x86_64/CMakeFiles/Export/lib/cmake/spdlog/spdlogConfigTargets.cmake")
+         "C:/Users/Name040220/Desktop/project/BMSTU_SD_project/libs/spdlog/build/x86_64/CMakeFiles/Export/lib/cmake/spdlog/spdlogConfigTargets.cmake")
     if(EXPORT_FILE_CHANGED)
       file(GLOB OLD_CONFIG_FILES "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/cmake/spdlog/spdlogConfigTargets-*.cmake")
       if(OLD_CONFIG_FILES)
@@ -76,16 +76,16 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
       endif()
     endif()
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/cmake/spdlog" TYPE FILE FILES "/home/gallaann/AndroidStudioProjects/libs/spdlog/build/x86_64/CMakeFiles/Export/lib/cmake/spdlog/spdlogConfigTargets.cmake")
-  if("${CMAKE_INSTALL_CONFIG_NAME}" MATCHES "^([Rr][Ee][Ll][Ww][Ii][Tt][Hh][Dd][Ee][Bb][Ii][Nn][Ff][Oo])$")
-    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/cmake/spdlog" TYPE FILE FILES "/home/gallaann/AndroidStudioProjects/libs/spdlog/build/x86_64/CMakeFiles/Export/lib/cmake/spdlog/spdlogConfigTargets-relwithdebinfo.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/cmake/spdlog" TYPE FILE FILES "C:/Users/Name040220/Desktop/project/BMSTU_SD_project/libs/spdlog/build/x86_64/CMakeFiles/Export/lib/cmake/spdlog/spdlogConfigTargets.cmake")
+  if("${CMAKE_INSTALL_CONFIG_NAME}" MATCHES "^([Rr][Ee][Ll][Ee][Aa][Ss][Ee])$")
+    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/cmake/spdlog" TYPE FILE FILES "C:/Users/Name040220/Desktop/project/BMSTU_SD_project/libs/spdlog/build/x86_64/CMakeFiles/Export/lib/cmake/spdlog/spdlogConfigTargets-release.cmake")
   endif()
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/cmake/spdlog" TYPE FILE FILES
-    "/home/gallaann/AndroidStudioProjects/libs/spdlog/build/x86_64/spdlogConfig.cmake"
-    "/home/gallaann/AndroidStudioProjects/libs/spdlog/build/x86_64/spdlogConfigVersion.cmake"
+    "C:/Users/Name040220/Desktop/project/BMSTU_SD_project/libs/spdlog/build/x86_64/spdlogConfig.cmake"
+    "C:/Users/Name040220/Desktop/project/BMSTU_SD_project/libs/spdlog/build/x86_64/spdlogConfigVersion.cmake"
     )
 endif()
 
@@ -97,5 +97,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/gallaann/AndroidStudioProjects/libs/spdlog/build/x86_64/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "C:/Users/Name040220/Desktop/project/BMSTU_SD_project/libs/spdlog/build/x86_64/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

@@ -46,15 +46,15 @@ add_library(spdlog::spdlog STATIC IMPORTED)
 
 set_target_properties(spdlog::spdlog PROPERTIES
   INTERFACE_COMPILE_DEFINITIONS "SPDLOG_COMPILED_LIB"
-  INTERFACE_INCLUDE_DIRECTORIES "/home/gallaann/AndroidStudioProjects/libs/spdlog/spdlog/include"
+  INTERFACE_INCLUDE_DIRECTORIES "C:/Users/Name040220/Desktop/project/BMSTU_SD_project/libs/spdlog/spdlog/include"
   INTERFACE_LINK_LIBRARIES "Threads::Threads;log"
 )
 
-# Import target "spdlog::spdlog" for configuration "RelWithDebInfo"
-set_property(TARGET spdlog::spdlog APPEND PROPERTY IMPORTED_CONFIGURATIONS RELWITHDEBINFO)
+# Import target "spdlog::spdlog" for configuration "Release"
+set_property(TARGET spdlog::spdlog APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
 set_target_properties(spdlog::spdlog PROPERTIES
-  IMPORTED_LINK_INTERFACE_LANGUAGES_RELWITHDEBINFO "CXX"
-  IMPORTED_LOCATION_RELWITHDEBINFO "/home/gallaann/AndroidStudioProjects/libs/spdlog/build/x86_64/libspdlog.a"
+  IMPORTED_LINK_INTERFACE_LANGUAGES_RELEASE "CXX"
+  IMPORTED_LOCATION_RELEASE "C:/Users/Name040220/Desktop/project/BMSTU_SD_project/libs/spdlog/build/x86_64/libspdlog.a"
   )
 
 # This file does not depend on other imported targets which have

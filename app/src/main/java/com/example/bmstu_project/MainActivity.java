@@ -39,6 +39,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(binding.getRoot());
         int res = initRng();
         byte[] text = "Hello max".getBytes(StandardCharsets.UTF_8);
+        TextView tv = findViewById(R.id.textView);
+        tv.setText(stringFromJNI());
 
         TextView tvEncoded = binding.tvEncoded;
         TextView tvDecoded = binding.tvDecoded;
@@ -54,6 +56,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
         //Heello OLA
+        stringFromJNI();
     }
 
     /**
