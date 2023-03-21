@@ -1,22 +1,40 @@
 package com.example.bmstu_project;
 
+
 import androidx.appcompat.app.AppCompatActivity;
 
+import androidx.activity.result.ActivityResult;
+import androidx.activity.result.ActivityResultCallback;
+import androidx.activity.result.ActivityResultLauncher;
+import androidx.activity.result.contract.ActivityResultContracts;
+import androidx.appcompat.app.AppCompatActivity;
+
+import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.bmstu_project.databinding.ActivityMainBinding;
 
 import java.nio.charset.StandardCharsets;
+import com.example.bmstu_project.databinding.ActivityMainBinding;
+
+import com.google.firebase.crashlytics.buildtools.reloc.org.apache.commons.codec.binary.Hex;
+
 
 public class MainActivity extends AppCompatActivity {
 
     public static native int initRng();
 
     public static native byte[] randomBytes(int no);
+
+
+
+
 
     public static native byte[] encrypt(byte[] key, byte[] data);
 
@@ -44,20 +62,45 @@ public class MainActivity extends AppCompatActivity {
 
         TextView tvEncoded = binding.tvEncoded;
         TextView tvDecoded = binding.tvDecoded;
-        binding.button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                byte[] key = randomBytes(16);
-                byte[] encryptByteArray = encrypt(key,text);
-                String encrypt = new String(encryptByteArray, StandardCharsets.UTF_8);
-                String decrypt = new String(decrypt(key, encryptByteArray), StandardCharsets.UTF_8);
-                tvEncoded.setText(encrypt);
-                tvDecoded.setText(decrypt);
-            }
-        });
-        //Heello OLA
-        stringFromJNI();
+
+        activityResultLauncher  = registerForActivityResult(
+                new ActivityResultContracts.StartActivityForResult(),
+                new ActivityResultCallback() {
+                    @Override
+                    public void onActivityResult(Object result) {
+                        if (((ActivityResult) result).getResultCode() == Activity.RESULT_OK) {
+                            Intent data = ((ActivityResult) result).getData();
+                            // обработка результата
+                            String pin = data.getStringExtra("pin");
+                            Toast.makeText(MainActivity.this, pin, Toast.LENGTH_SHORT).show();
+                        }
+                    }
+                });
+
     }
+;
+    public static byte[] stringToHex(String s)
+    {
+        byte[] hex;
+        try
+        {
+            hex = Hex.decodeHex(s.toCharArray());
+        } catch (
+                com.google.firebase.crashlytics.buildtools.reloc.org.apache.commons.codec.DecoderException e) {
+            throw new RuntimeException(e);
+        }
+        return hex;
+    }
+    public void onButtonClick(android.view.View view) {
+        Intent it = new Intent(this, PinpadActivity.class);
+        //startActivity(it);
+        activityResultLauncher.launch(it);
+    }
+    ActivityResultLauncher activityResultLauncher;
+
+
+
+
 
     /**
      * A native method that is implemented by the 'bmstu_project' native library,
@@ -65,3 +108,4 @@ public class MainActivity extends AppCompatActivity {
      */
 
 }
+
