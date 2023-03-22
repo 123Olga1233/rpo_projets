@@ -57,11 +57,6 @@ public class MainActivity extends AppCompatActivity {
         setContentView(binding.getRoot());
         int res = initRng();
         byte[] text = "Hello max".getBytes(StandardCharsets.UTF_8);
-        TextView tv = findViewById(R.id.textView);
-        tv.setText(stringFromJNI());
-
-        TextView tvEncoded = binding.tvEncoded;
-        TextView tvDecoded = binding.tvDecoded;
 
         activityResultLauncher  = registerForActivityResult(
                 new ActivityResultContracts.StartActivityForResult(),
@@ -98,7 +93,14 @@ public class MainActivity extends AppCompatActivity {
     }
     ActivityResultLauncher activityResultLauncher;
 
-
+    public void onButtonClickThird(android.view.View view) {
+        Intent it = new Intent(this, ThirdPart.class);
+        startActivity(it);
+    }
+    public void onButtonClickFourth(android.view.View view) {
+        Intent it = new Intent(this, FourthPart.class);
+        startActivity(it);
+    }
 
 
 

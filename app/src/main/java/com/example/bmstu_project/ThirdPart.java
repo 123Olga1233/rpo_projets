@@ -18,10 +18,11 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.bmstu_project.databinding.ActivityMainBinding;
+import com.example.bmstu_project.databinding.ActivityThirdPartBinding;
 
 public class ThirdPart extends AppCompatActivity implements TransactionEvents {
 
-    private @NonNull ActivityMainBinding binding;
+    private @NonNull ActivityThirdPartBinding binding;
     private String pin;
     private ActivityResultLauncher activityResultLauncher;
     public native boolean transaction(byte[] trd);
@@ -29,7 +30,7 @@ public class ThirdPart extends AppCompatActivity implements TransactionEvents {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        binding = ActivityMainBinding.inflate(getLayoutInflater());
+        binding = ActivityThirdPartBinding.inflate(getLayoutInflater());
         binding.btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

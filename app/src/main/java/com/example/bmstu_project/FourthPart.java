@@ -7,6 +7,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
 
+import com.example.bmstu_project.databinding.ActivityFourthPartBinding;
 import com.example.bmstu_project.databinding.ActivityMainBinding;
 import org.apache.commons.io.IOUtils;
 
@@ -21,13 +22,13 @@ import java.util.regex.Pattern;
 
 public class FourthPart extends AppCompatActivity {
 
-    private ActivityMainBinding binding;
+    private ActivityFourthPartBinding binding;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        binding = ActivityMainBinding.inflate(getLayoutInflater());
-        binding.btn.setOnClickListener(new View.OnClickListener() {
+        binding = ActivityFourthPartBinding.inflate(getLayoutInflater());
+        binding.butto.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 testHttpClient();
@@ -40,10 +41,11 @@ public class FourthPart extends AppCompatActivity {
         new Thread(() -> {
             try {
                 HttpURLConnection uc = (HttpURLConnection)
-                        (new URL("http://10.0.2.2:8080/api/v1/title").openConnection());
+                        (new URL("http://10.0.2.2:8081/api/v1/title").openConnection());
                 InputStream inputStream = uc.getInputStream();
                 String html = IOUtils.toString(inputStream);
                 String title = getPageTitle(html);
+                Log.d("!!!", "Hello");
                 runOnUiThread(() ->
                 {
                     Toast.makeText(this, title, Toast.LENGTH_LONG).show();
