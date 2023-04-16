@@ -43,6 +43,17 @@ public class User {
 
     @ManyToMany(mappedBy = "users")
     public Set<Museum> museums = new HashSet<>();
+    public String getLogin(){
+        return this.login;
+    }
+
+    public String getEmail(){
+        return this.email;
+    }
+
+    public String getPassword(){
+        return this.password;
+    }
 
     public void addMuseum(Museum m) {
         this.museums.add(m);
