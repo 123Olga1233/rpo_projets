@@ -1,7 +1,7 @@
 package com.example.backend.controllers;
 
 import com.example.backend.models.Museum;
-import com.example.backend.models.User;
+//import com.example.backend.models.User;
 import com.example.backend.repositories.MuseumRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

@@ -1,4 +1,4 @@
-package com.example.backend.auth;
+/*package com.example.backend.auth;
 
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
@@ -50,4 +50,4 @@ public class AuthenticationFilter extends AbstractAuthenticationProcessingFilter
         SecurityContextHolder.getContext().setAuthentication(authResult);
         chain.doFilter(request, response);
     }
-}
+}*/

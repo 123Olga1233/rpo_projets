@@ -1,4 +1,4 @@
-package com.example.backend.auth;
+/*package com.example.backend.auth;
 
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
@@ -23,4 +23,4 @@ public class JwtDsl extends AbstractHttpConfigurer<JwtDsl, HttpSecurity> {
     public static JwtDsl jwtDsl() {
         return new JwtDsl();
     }
-}
+}*/

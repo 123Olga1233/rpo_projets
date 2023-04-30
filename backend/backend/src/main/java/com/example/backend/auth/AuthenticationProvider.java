@@ -1,4 +1,4 @@
-package com.example.backend.auth;
+/*package com.example.backend.auth;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -44,4 +44,4 @@ public class AuthenticationProvider extends AbstractUserDetailsAuthenticationPro
                 AuthorityUtils.createAuthorityList("USER"));
         return user;
     }
-}
+}*/

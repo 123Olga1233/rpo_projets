@@ -1,4 +1,4 @@
-package com.example.backend.auth;
+/*package com.example.backend.auth;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
@@ -52,7 +52,7 @@ public class SecurityConfiguration {
     }
 
 }
-/*
+
     @Bean
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
         http.sessionManagement().sessionCreationPolicy(SessionCreationPolicy.NEVER)
@@ -80,8 +80,7 @@ public class SecurityConfiguration {
     }
 
 }
-*/
-/*
+
 @Configuration
 @EnableWebSecurity
 @EnableGlobalMethodSecurity(prePostEnabled = true)
